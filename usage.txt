@@ -1,0 +1,2 @@
+Usage:
+  district <namespace> <packages...>
