@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "A small tool to help you write local, namespaced packages for larger projects",
   "main": "index.js",
+  "bin": {
+    "district": "cli.js"
+  },
   "license": "MIT",
   "scripts": {},
   "author": {
