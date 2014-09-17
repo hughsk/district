@@ -12,6 +12,11 @@ function district(namespace, linked, dirname, done) {
   dirname = path.resolve(dirname)
   done    = once(done)
 
+  var dup = getDuplicate(linked.map(path.basename))
+  if (dup) {
+    throw new Error('Duplicate package name: ' + dup)
+  }
+
   findup(dirname, 'package.json', function(err, root) {
     if (err) return done(err)
 
@@ -57,4 +62,14 @@ function district(namespace, linked, dirname, done) {
       }
     })
   }
+}
+
+function getDuplicate(arr) {
+  for (var x = 0; x < arr.length; x++)
+  for (var y = 0; y < arr.length; y++) {
+    if (x === y) continue
+    if (arr[x] === arr[y]) return arr[x]
+  }
+
+  return false
 }
