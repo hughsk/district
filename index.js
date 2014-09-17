@@ -2,13 +2,14 @@ var debug  = require('debug')('district')
 var findup = require('findup')
 var mkdirp = require('mkdirp')
 var once   = require('once')
+var uniq   = require('uniq')
 var path   = require('path')
 var fs     = require('fs')
 
 module.exports = district
 
 function district(namespace, linked, dirname, done) {
-  linked  = Array.isArray(linked) ? linked : [linked]
+  linked  = uniq(Array.isArray(linked) ? linked : [linked])
   dirname = path.resolve(dirname)
   done    = once(done)
 
