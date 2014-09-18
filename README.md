@@ -15,7 +15,7 @@ an issue!
 
 ``` bash
 Usage:
-  district <namespace> <packages...>
+  district <namespace> <packages...> {options}
 ```
 
 Where `<namespace>` is the package namespace to use, and `<packages...>` is
@@ -61,6 +61,18 @@ bullet by any means.
 Because it's forcing namespacing onto you, it should (in theory) be relatively
 trivial to move the codebase over to something like
 [npme](https://www.npmjs.org/enterprise) when you're ready.
+
+If you're looking to tweak the behavior of district a little:
+
+```
+  --prefix  Remove a string prefix from each package name.
+            For example:
+
+              $ district modules module-* --prefix module
+
+            Would yield "a" and "b" instead of "module-a"
+            and "module-b"
+```
 
 ## License
 

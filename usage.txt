@@ -1,2 +1,12 @@
 Usage:
   district <namespace> <packages...>
+
+Options:
+
+  --prefix  Remove a string prefix from each package name.
+            For example:
+
+              $ district modules module-* --prefix module
+
+            Would yield "a" and "b" instead of "module-a"
+            and "module-b"
