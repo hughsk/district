@@ -1,4 +1,7 @@
-# district [![experimental](http://badges.github.io/stability-badges/dist/experimental.svg)](http://github.com/badges/stability-badges)
+# district [![deprecated](http://badges.github.io/stability-badges/dist/deprecated.svg)](http://github.com/badges/stability-badges)
+
+**District has been deprecated in favor of
+[linklocal](http://github.com/timoxley/linklocal).**
 
 District is a small tool to help you write local scoped packages for large
 projects within small teams. It's like
