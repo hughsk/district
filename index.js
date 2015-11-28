@@ -24,7 +24,10 @@ function district(namespace, linked, dirname, opts, done) {
     String(opts.prefix) || ''
   ) + '\\-?', 'g')
 
-  var dup = getDuplicate(linked.map(path.basename))
+  var dup = getDuplicate(linked.map(function (d) {
+    return path.basename(d)
+  }))
+
   if (dup) {
     throw new Error('Duplicate package name: ' + dup)
   }
