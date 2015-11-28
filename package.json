@@ -1,6 +1,6 @@
 {
   "name": "district",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A small tool to help you write local, namespaced packages for larger projects",
   "main": "index.js",
   "bin": {
